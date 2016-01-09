@@ -33,6 +33,8 @@
 
 #define RandomColor RGBColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256))
 
+#define iOS7 ([[[UIDevice currentDevice]systemVersion] doubleValue]>= 7.0)
+
 
 
 #endif

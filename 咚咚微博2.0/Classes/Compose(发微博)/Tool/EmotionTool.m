@@ -7,6 +7,8 @@
 //
 
 #import "EmotionTool.h"
+#import "MJExtension.h"
+
 
 //最近使用的表情路径
 #define RecentEmotionsPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"emotions.archive"]
@@ -49,4 +51,53 @@ static NSMutableArray *_recentEmotions;
 {
     return _recentEmotions;
 }
+
+static NSArray *_emojiEmotions,*_defaultEmotions,*_lxhEmotions;
++ (NSArray *)defaultEmotions
+{
+    if (!_defaultEmotions) {
+        NSString *path = [[NSBundle mainBundle]pathForResource:@"EmotionIcons/default/info.plist" ofType:nil];
+        _defaultEmotions =  [Emotion objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
+    }
+    return _defaultEmotions;
+}
++(NSArray *)lxhEmotions
+{
+    if (!_lxhEmotions) {
+        NSString *path = [[NSBundle mainBundle]pathForResource:@"EmotionIcons/lxh/info.plist" ofType:nil];
+        _lxhEmotions = [Emotion objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
+    }
+    return _lxhEmotions;
+}
++ (NSArray *)emojiEmotions
+{
+    if (!_emojiEmotions) {
+        NSString *path = [[NSBundle mainBundle]pathForResource:@"EmotionIcons/emoji/info.plist" ofType:nil];
+        _emojiEmotions = [Emotion objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
+    }
+    return _emojiEmotions;
+}
++ (Emotion *)emtionWithChs:(NSString *)chs
+{
+    NSArray *defaults = [self defaultEmotions];
+    for (Emotion *emotion in defaults) {
+        if ([emotion.chs isEqualToString:chs]) {
+            return emotion;
+        }
+    }
+    NSArray *lxhs = [self lxhEmotions];
+    for (Emotion *emotion in lxhs) {
+        if ([emotion.chs isEqualToString:chs]) {
+            return emotion;
+        }
+    }
+    NSArray *emojis = [self defaultEmotions];
+    for (Emotion *emotion in emojis) {
+        if ([emotion.chs isEqualToString:chs]) {
+            return emotion;
+        }
+    }
+    return nil;
+}
+
 @end

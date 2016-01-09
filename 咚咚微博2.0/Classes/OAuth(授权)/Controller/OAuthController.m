@@ -14,6 +14,7 @@
 #import "MBProgressHUD+MJ.h"
 #import "WBAccountTool.h"
 #import "UIWindow+Extension.h"
+#import "HttpTool.h"
 
 
 @interface OAuthController()<UIWebViewDelegate>
@@ -83,23 +84,7 @@
  */
 -(void)accessTokenWithCode:(NSString *)code
 {
-    /*
-     URL：https://api.weibo.com/oauth2/access_token
-     
-     请求参数：
-     client_id：申请应用时分配的AppKey
-     client_secret：申请应用时分配的AppSecret
-     grant_type：使用authorization_code
-     redirect_uri：授权成功后的回调地址
-     code：授权成功后返回的code
-     */
-    // 1.请求管理者
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-        mgr.responseSerializer = [AFJSONResponseSerializer serializer];
-    
-    // AFN的AFJSONResponseSerializer默认不接受text/plain这种类型
-    
-    // 2.拼接请求参数
+    // 1.拼接请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"client_id"] = AppKey;
     params[@"client_secret"] = AppSecret;
@@ -107,21 +92,21 @@
     params[@"redirect_uri"] = RedirectURI;
     params[@"code"] = code;
     
-    // 3.发送请求
-    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-        Log(@"请求成功-%@", responseObject);
+    // 2.发送请求
+    [HttpTool post:@"https://api.weibo.com/oauth2/access_token" params:params success:^(id json) {
+        Log(@"请求成功-%@", json);
         [MBProgressHUD hideHUD];
         
         //将返回的账号数据存进沙盒
-        WBAccount *acc = [WBAccount accountWithDict:responseObject];
+        WBAccount *acc = [WBAccount accountWithDict:json];
         [WBAccountTool saveAccount:acc];
         
         //切换窗口的根控制器
         [UIWindow switchRootViewController];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSError *error) {
         Log(@"请求失败-%@", error);
         [MBProgressHUD hideHUD];
+
     }];
 }
 

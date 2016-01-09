@@ -7,7 +7,6 @@
 //
 
 #import "EmotionKeyboard.h"
-#import "MJExtension.h"
 #import "Emotion.h"
 #import "EmotionTool.h"
 
@@ -39,8 +38,7 @@
 {
     if (!_defaultView) {
         self.defaultView = [[EmotionListView alloc]init];
-        NSString *path = [[NSBundle mainBundle]pathForResource:@"EmotionIcons/default/info.plist" ofType:nil];
-        NSArray *defaultEmotions = [Emotion objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
+        NSArray *defaultEmotions = [EmotionTool defaultEmotions];
         [_defaultView setEmotions:defaultEmotions];
     }
     return _defaultView;
@@ -50,8 +48,7 @@
 {
     if (!_emojiView) {
         self.emojiView = [[EmotionListView alloc]init];
-        NSString *path = [[NSBundle mainBundle]pathForResource:@"EmotionIcons/emoji/info.plist" ofType:nil];
-        NSArray *emojiEmotions = [Emotion objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
+        NSArray *emojiEmotions = [EmotionTool emojiEmotions];
         [self.emojiView setEmotions:emojiEmotions];
     }
     return _emojiView;
@@ -61,8 +58,7 @@
 {
     if (!_lxhView) {
         self.lxhView = [[EmotionListView alloc]init];
-        NSString *path = [[NSBundle mainBundle]pathForResource:@"EmotionIcons/lxh/info.plist" ofType:nil];
-        NSArray *lxhEmotions = [Emotion objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:path]];
+        NSArray *lxhEmotions = [EmotionTool lxhEmotions];
         [self.lxhView setEmotions:lxhEmotions];
 
     }

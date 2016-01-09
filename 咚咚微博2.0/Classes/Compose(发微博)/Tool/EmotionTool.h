@@ -12,4 +12,9 @@
 @interface EmotionTool : NSObject
 +(void)addRecentEmotion:(Emotion *)emotion;
 +(NSArray *)recentEmotions;
++(NSArray *)defaultEmotions;
++(NSArray *)lxhEmotions;
++(NSArray *)emojiEmotions;
+
++(Emotion *)emtionWithChs:(NSString *)chs;
 @end

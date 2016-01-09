@@ -32,6 +32,7 @@
     //3.设置根控制器
     //将返回的账号数据存进沙盒
     WBAccount *acc = [WBAccountTool account];
+    //账号有效
     if (acc) {
         //处理新版本特性和主页的逻辑
         [UIWindow switchRootViewController];

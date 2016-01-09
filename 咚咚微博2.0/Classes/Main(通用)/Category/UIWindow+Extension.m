@@ -4,7 +4,7 @@
 //
 //  Created by J.Beyond on 15/6/30.
 //  Copyright (c) 2015年 J.Beyond. All rights reserved.
-//
+//  
 
 #import "UIWindow+Extension.h"
 #import "MainTabBarController.h"
@@ -20,7 +20,7 @@
     
     //获得当前软件的版本号（Info.plist中获取）
     NSDictionary *infoDict = [NSBundle mainBundle].infoDictionary;
-    NSString *appVersion = infoDict[@"CFBundleVersion"];
+    NSString *appVersion = infoDict[key];
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     if ([appVersion isEqual:lastVersion]) {//同一版本
         //直接进入应用

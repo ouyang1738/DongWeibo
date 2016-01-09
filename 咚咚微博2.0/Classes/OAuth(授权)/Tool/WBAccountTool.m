@@ -21,14 +21,15 @@
 
 + (WBAccount *)account
 {
+    //将沙盒存储的账号信息转为WBAccount对象
     WBAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:WBAccountPath];
     //验证账号是否过期
     long long expires_in = [account.expires_in longLongValue];
-    //获得过期时间
+    //获得过期时间 (dateByAddingTimeInterval:返回以当前NSDate对象为基准，偏移多少秒后得到的新NSDate对象。)
     NSDate *expiresTime = [account.created_time dateByAddingTimeInterval:expires_in];
     //当前日期
     NSDate *now = [NSDate date];
-    
+    //比较当前时间与过期时间的大小
     NSComparisonResult result = [expiresTime compare:now];
     
     /**

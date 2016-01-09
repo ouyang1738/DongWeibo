@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		0F1F5B241C2D968F00D5177B /* EmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1F5B231C2D968F00D5177B /* EmotionTool.m */; };
 		0F1F5B271C2ED73900D5177B /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1F5B261C2ED73900D5177B /* Const.m */; };
+		0F1F5B2A1C2F8B3D00D5177B /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1F5B291C2F8B3D00D5177B /* HttpTool.m */; };
 		0F245BB91C251888003AF234 /* EmotionTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F245BB81C251888003AF234 /* EmotionTextView.m */; };
 		0F245BBC1C264D6D003AF234 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F245BBB1C264D6D003AF234 /* UITextView+Extension.m */; };
+		0FC4F3751C36ADC000F00BB0 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC4F3741C36ADC000F00BB0 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0FC4F3771C36AE5700F00BB0 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC4F3761C36AE5700F00BB0 /* libicucore.tbd */; };
+		0FC4F37A1C376B6B00F00BB0 /* WBTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC4F3791C376B6B00F00BB0 /* WBTextPart.m */; };
+		0FC4F37D1C37B44A00F00BB0 /* WBStatusTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC4F37C1C37B44A00F00BB0 /* WBStatusTextView.m */; };
+		0FC4F3801C37D47D00F00BB0 /* WBSpecial.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC4F37F1C37D47D00F00BB0 /* WBSpecial.m */; };
 		0FD9F1CE1C1DACAF0083B661 /* EmotionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9F1CD1C1DACAF0083B661 /* EmotionPopView.m */; };
 		0FD9F1D01C1DACD70083B661 /* EmotionPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FD9F1CF1C1DACD70083B661 /* EmotionPopView.xib */; };
 		0FD9F1D31C1DB75C0083B661 /* EmotionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD9F1D21C1DB75C0083B661 /* EmotionButton.m */; };
@@ -118,10 +124,21 @@
 		0F1F5B231C2D968F00D5177B /* EmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionTool.m; sourceTree = "<group>"; };
 		0F1F5B251C2ED73900D5177B /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		0F1F5B261C2ED73900D5177B /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
+		0F1F5B281C2F8B3D00D5177B /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		0F1F5B291C2F8B3D00D5177B /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		0F245BB71C251888003AF234 /* EmotionTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionTextView.h; sourceTree = "<group>"; };
 		0F245BB81C251888003AF234 /* EmotionTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionTextView.m; sourceTree = "<group>"; };
 		0F245BBA1C264D6D003AF234 /* UITextView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extension.h"; sourceTree = "<group>"; };
 		0F245BBB1C264D6D003AF234 /* UITextView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extension.m"; sourceTree = "<group>"; };
+		0FC4F3731C36ADC000F00BB0 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		0FC4F3741C36ADC000F00BB0 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		0FC4F3761C36AE5700F00BB0 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		0FC4F3781C376B6B00F00BB0 /* WBTextPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBTextPart.h; sourceTree = "<group>"; };
+		0FC4F3791C376B6B00F00BB0 /* WBTextPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBTextPart.m; sourceTree = "<group>"; };
+		0FC4F37B1C37B44A00F00BB0 /* WBStatusTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBStatusTextView.h; sourceTree = "<group>"; };
+		0FC4F37C1C37B44A00F00BB0 /* WBStatusTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStatusTextView.m; sourceTree = "<group>"; };
+		0FC4F37E1C37D47D00F00BB0 /* WBSpecial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSpecial.h; sourceTree = "<group>"; };
+		0FC4F37F1C37D47D00F00BB0 /* WBSpecial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSpecial.m; sourceTree = "<group>"; };
 		0FD9F1CC1C1DACAF0083B661 /* EmotionPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionPopView.h; sourceTree = "<group>"; };
 		0FD9F1CD1C1DACAF0083B661 /* EmotionPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionPopView.m; sourceTree = "<group>"; };
 		0FD9F1CF1C1DACD70083B661 /* EmotionPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmotionPopView.xib; sourceTree = "<group>"; };
@@ -308,6 +325,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC4F3771C36AE5700F00BB0 /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +346,15 @@
 				0F1F5B231C2D968F00D5177B /* EmotionTool.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		0FC4F3721C36ADC000F00BB0 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				0FC4F3731C36ADC000F00BB0 /* RegexKitLite.h */,
+				0FC4F3741C36ADC000F00BB0 /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
 			sourceTree = "<group>";
 		};
 		3001AD761B42D7670053C1FF /* Tool */ = {
@@ -363,6 +390,7 @@
 		303319471B39A234002EDBA8 = {
 			isa = PBXGroup;
 			children = (
+				0FC4F3761C36AE5700F00BB0 /* libicucore.tbd */,
 				303319521B39A234002EDBA8 /* 咚咚微博2.0 */,
 				3033196C1B39A234002EDBA8 /* 咚咚微博2.0Tests */,
 				303319511B39A234002EDBA8 /* Products */,
@@ -556,6 +584,10 @@
 				309613F31B477F89008F6F2D /* WBStatus.m */,
 				30E903261B4AC78B00F79488 /* WBPhoto.h */,
 				30E903271B4AC78B00F79488 /* WBPhoto.m */,
+				0FC4F3781C376B6B00F00BB0 /* WBTextPart.h */,
+				0FC4F3791C376B6B00F00BB0 /* WBTextPart.m */,
+				0FC4F37E1C37D47D00F00BB0 /* WBSpecial.h */,
+				0FC4F37F1C37D47D00F00BB0 /* WBSpecial.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -576,6 +608,8 @@
 				309FE26E1B50C28D009046BC /* WBStatusPhotosView.m */,
 				304EB7C41B510A0700603DF6 /* WBStatusPhotoView.h */,
 				304EB7C51B510A0700603DF6 /* WBStatusPhotoView.m */,
+				0FC4F37B1C37B44A00F00BB0 /* WBStatusTextView.h */,
+				0FC4F37C1C37B44A00F00BB0 /* WBStatusTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -630,6 +664,7 @@
 		307D940E1B3D8C9400CD2585 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				0FC4F3721C36ADC000F00BB0 /* RegexKitLite */,
 				309613F51B47859F008F6F2D /* MJExtension */,
 				309613BD1B477A2B008F6F2D /* SDWebImage */,
 				301AFDC71B4195D3004655CE /* MBProgressHUD */,
@@ -918,6 +953,8 @@
 			children = (
 				309FE2641B50B0B3009046BC /* DateTransferTool.h */,
 				309FE2651B50B0B3009046BC /* DateTransferTool.m */,
+				0F1F5B281C2F8B3D00D5177B /* HttpTool.h */,
+				0F1F5B291C2F8B3D00D5177B /* HttpTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1027,6 +1064,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309614091B47859F008F6F2D /* MJProperty.m in Sources */,
+				0FC4F3751C36ADC000F00BB0 /* RegexKitLite.m in Sources */,
 				309613EC1B477A2B008F6F2D /* UIImageView+HighlightedWebCache.m in Sources */,
 				0F245BB91C251888003AF234 /* EmotionTextView.m in Sources */,
 				307D94651B4035A000CD2585 /* AFURLSessionManager.m in Sources */,
@@ -1045,6 +1083,7 @@
 				3096140A1B47859F008F6F2D /* MJType.m in Sources */,
 				30A91EEA1B53F5150002B7EE /* EmotionTabbar.m in Sources */,
 				304EB7C61B510A0700603DF6 /* WBStatusPhotoView.m in Sources */,
+				0F1F5B2A1C2F8B3D00D5177B /* HttpTool.m in Sources */,
 				309613BC1B47669E008F6F2D /* TitleButton.m in Sources */,
 				0F1F5B241C2D968F00D5177B /* EmotionTool.m in Sources */,
 				309613E81B477A2B008F6F2D /* UIButton+WebCache.m in Sources */,
@@ -1104,12 +1143,15 @@
 				309613E01B477A2B008F6F2D /* NSData+ImageContentType.m in Sources */,
 				309613B61B46D042008F6F2D /* Foundation+Log.m in Sources */,
 				309613EB1B477A2B008F6F2D /* UIImage+WebP.m in Sources */,
+				0FC4F3801C37D47D00F00BB0 /* WBSpecial.m in Sources */,
 				307D94281B3D8C9500CD2585 /* CommonNavContoller.m in Sources */,
 				307D94631B4035A000CD2585 /* AFURLRequestSerialization.m in Sources */,
+				0FC4F37A1C376B6B00F00BB0 /* WBTextPart.m in Sources */,
 				30F416F61B59392D00E598D7 /* EmotionPageView.m in Sources */,
 				307D945D1B4035A000CD2585 /* AFHTTPRequestOperation.m in Sources */,
 				307D94641B4035A000CD2585 /* AFURLResponseSerialization.m in Sources */,
 				307D943C1B3EB86C00CD2585 /* MyTabBar.m in Sources */,
+				0FC4F37D1C37B44A00F00BB0 /* WBStatusTextView.m in Sources */,
 				301AFDCF1B4195D3004655CE /* MBProgressHUD.m in Sources */,
 				309613E11B477A2B008F6F2D /* SDImageCache.m in Sources */,
 				304EB7D01B51EF8600603DF6 /* WBComposeController.m in Sources */,

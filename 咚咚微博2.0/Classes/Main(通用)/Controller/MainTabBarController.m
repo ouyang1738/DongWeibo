@@ -65,7 +65,12 @@
     
     //设置子控制器TabBar的图标
     childVc.tabBarItem.image = [UIImage imageNamed:image];
-    childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    if (iOS7) {
+        childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }else{
+        childVc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    }
+    
     
     //设置文字的样式
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];

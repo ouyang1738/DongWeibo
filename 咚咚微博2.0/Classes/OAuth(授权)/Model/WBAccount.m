@@ -15,14 +15,13 @@
     acc.access_token = dict[@"access_token"];
     acc.uid = dict[@"uid"];
     acc.expires_in = dict[@"expires_in"];
-    //获得账号存储的时间
+    //设置账号的创建时间为当前时间
     acc.created_time = [NSDate date];
     return acc;
 }
 
 /**
  *  当一个对象要归档进沙盒时调用
- *
  */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
